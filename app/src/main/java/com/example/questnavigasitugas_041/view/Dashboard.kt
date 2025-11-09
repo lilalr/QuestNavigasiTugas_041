@@ -190,7 +190,15 @@ fun BottomNavigationBar(
     onNavigateToHome: () -> Unit,
     onNavigateToForm: () -> Unit
 ) {
-
+    NavigationBar(containerColor = Color.DarkGray) {
+        NavigationBarItem(
+            icon = {
+                Icon(
+                    imageVector = Icons.Default.Home,
+                    contentDescription = "Beranda",
+                    tint = Color.White
+                )
+            },
 
 
 

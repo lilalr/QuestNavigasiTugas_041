@@ -138,6 +138,52 @@ fun ListScreen(
                         fontSize = 14.sp
                     )
                 }
+            } else {
+                LazyColumn(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(horizontal = 16.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    items(
+                        listPeserta
+                    ) { peserta ->
+                        Card(
+                            modifier = Modifier
+                                .fillMaxWidth(),
+                            shape = RoundedCornerShape(20.dp),
+                            colors = CardDefaults.cardColors(
+                                containerColor = Color(0xFFE6E6E6)),
+                            elevation = CardDefaults.cardElevation(
+                                defaultElevation = 2.dp)
+                        ) {
+                            Column(
+                                modifier = Modifier
+                                    .padding(16.dp)) {
+                                Text(
+                                    "Nama: ${peserta.namaLengkap}",
+                                    color = Color.Black)
+                                Text(
+                                    "Jenis Kelamin: ${peserta.jenisKelamin}",
+                                    color = Color.Black)
+                                Text(
+                                    "Jabatan: ${peserta.jabatan}",
+                                    color = Color.Black)
+                                Text(
+                                    "Departemen: ${peserta.departemen}",
+                                    color = Color.Black)
+                                Text(
+                                    "Status: ${peserta.status}",
+                                    color = Color.Black)
+                            }
+                        }
+                    }
+                }
             }
+        }
+    }
+}
+
+
 
 

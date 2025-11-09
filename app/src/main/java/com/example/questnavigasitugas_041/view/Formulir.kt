@@ -76,4 +76,30 @@ fun FormulirScreen(
                     modifier = Modifier
                         .padding(20.dp)
                 ) {
+                    if (showError) {
+                        Card(
+                            colors = CardDefaults.cardColors(
+                                containerColor = Color(0xFFFFE6E6)),
+                            shape = RoundedCornerShape(20.dp),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(bottom = 12.dp)
+                        ) {
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier
+                                    .padding(12.dp)
+                            ) {
+                                Spacer(modifier = Modifier
+                                    .width(8.dp))
+                                Text(
+                                    text = "Data tidak boleh kosong !",
+                                    color = Color.Red,
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                            }
+                        }
+                    }
+
 

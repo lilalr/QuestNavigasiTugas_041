@@ -272,4 +272,27 @@ fun FormulirScreen(
 }
 
 
+@Composable
+fun InputField(label: String,
+               value: String,
+               onValueChange: (String) -> Unit) {
+    Text(
+        label,
+        fontSize = 12.sp,
+        fontWeight = FontWeight.SemiBold,
+        color = Color.DarkGray)
+    OutlinedTextField(
+        value = value,
+        onValueChange = onValueChange,
+        placeholder = { Text("$label") },
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 16.dp),
+        textStyle = TextStyle(
+            fontSize = 14.sp),
+        keyboardOptions = KeyboardOptions(
+            keyboardType = KeyboardType.Text)
+    )
+}
+
 

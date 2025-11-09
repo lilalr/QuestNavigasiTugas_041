@@ -102,4 +102,27 @@ fun FormulirScreen(
                         }
                     }
 
+                    InputField(
+                        "Nama Lengkap",
+                        namaLengkap
+                    ) {
+                        namaLengkap = it; showError = false }
+                    GenderField(
+                        jenisKelamin
+                    ) {
+                        jenisKelamin = it;
+                        showError = false }
+                    InputField(
+                        "Jabatan",
+                        jabatan
+                    ) {
+                        jabatan = it;
+                        showError = false }
+                    InputField(
+                        "Departemen",
+                        departemen
+                    ) {
+                        departemen = it;
+                        showError = false }
+
 

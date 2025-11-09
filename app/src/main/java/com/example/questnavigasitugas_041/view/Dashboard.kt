@@ -83,6 +83,24 @@ fun WelcomeScreen(onMasukClick: () -> Unit) {
                 color = Color.DarkGray,
                 modifier = Modifier.padding(bottom = 30.dp))
 
+            Button(
+                onClick = onMasukClick,
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Black),
+                shape = CircleShape,
+                modifier = Modifier
+                    .width(180.dp)
+                    .height(48.dp)
+            ) {
+                Text(
+                    "Masuk",
+                    fontSize = 15.sp,
+                    color = Color.White,
+                    fontWeight = FontWeight.Medium)
+            }
+        }
+    }
+}
+
 
 
 

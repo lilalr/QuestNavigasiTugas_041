@@ -34,5 +34,20 @@ fun NavigasiApp(
             )
         }
 
+        composable(HalamanApp.List.name) {
+            com.example.questnavigasitugas_041.view.ListScreen(
+                listPeserta = listPeserta,
+                onNavigateToForm = {
+                    navController.navigate(HalamanApp.Formulir.name)
+                },
+                onNavigateToHome = {
+                    navController.popBackStack(
+                        HalamanApp.Welcome.name,
+                        inclusive = false
+                    )
+                }
+            )
+        }
+
 
 

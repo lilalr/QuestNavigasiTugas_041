@@ -37,4 +37,25 @@ fun FormulirScreen(
 
     val statusOptions = listOf("Aktif", "Cuti", "Kontrak", "Resign")
 
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(0xFFE6E6E6))
+            .padding(16.dp)
+    ) {
+        Column(
+            modifier = Modifier
+                .verticalScroll(rememberScrollState())
+                .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = "Formulir Data Karyawan",
+                fontSize = 22.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Black,
+                modifier = Modifier
+                    .padding(top = 16.dp, bottom = 16.dp)
+            )
+
 

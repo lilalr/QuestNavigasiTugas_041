@@ -13,4 +13,44 @@ data class TampilData(
     val status: String = ""
 )
 
+class PesertaViewModel : ViewModel() {
 
+    private val _listPeserta = MutableStateFlow(
+        listOf(
+            TampilData(
+                namaLengkap = "Gita Anggraini",
+                jenisKelamin = "Perempuan",
+                jabatan = "Staff HRD",
+                departemen = "Human Resource",
+                status = "Aktif"
+            ),
+            TampilData(
+                namaLengkap = "Farhan Yusuf",
+                jenisKelamin = "Laki-Laki",
+                jabatan = "Supervisor Produksi",
+                departemen = "Produksi",
+                status = "Cuti"
+            ),
+            TampilData(
+                namaLengkap = "Citra Lestari",
+                jenisKelamin = "Perempuan",
+                jabatan = "Manager Keuangan",
+                departemen = "Finance",
+                status = "Aktif"
+            ),
+            TampilData(
+                namaLengkap = "Hari Wijaya",
+                jenisKelamin = "Laki-Laki",
+                jabatan = "Staff IT Support",
+                departemen = "Teknologi Informasi",
+                status = "Kontrak"
+            )
+        )
+    )
+
+    val listPeserta: StateFlow<List<TampilData>> = _listPeserta.asStateFlow()
+
+    fun addPeserta(data: TampilData) {
+        _listPeserta.value = _listPeserta.value + data
+    }
+}

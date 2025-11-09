@@ -49,5 +49,16 @@ fun NavigasiApp(
             )
         }
 
-
+        composable(HalamanApp.Formulir.name) {
+            com.example.questnavigasitugas_041.view.FormulirScreen(
+                onSubmit = { data ->
+                    viewModel.addPeserta(data)
+                },
+                onKembali = {
+                    navController.navigate(HalamanApp.List.name)
+                }
+            )
+        }
+    }
+}
 

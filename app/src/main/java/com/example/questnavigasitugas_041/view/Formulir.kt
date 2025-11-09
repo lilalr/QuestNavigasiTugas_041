@@ -253,4 +253,23 @@ fun FormulirScreen(
                             modifier = Modifier
                                 .padding(bottom = 16.dp))
 
+                        Button(
+                            onClick = { showPopup = false; onKembali() },
+                            modifier = Modifier
+                                .fillMaxWidth(),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = Color.Black)
+                        ) {
+                            Text(
+                                "OK",
+                                color = Color.White)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 

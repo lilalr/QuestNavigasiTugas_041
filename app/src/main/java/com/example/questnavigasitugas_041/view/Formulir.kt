@@ -125,4 +125,46 @@ fun FormulirScreen(
                         departemen = it;
                         showError = false }
 
+                    Text(
+                        "Status",
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color.DarkGray
+                    )
+                    ExposedDropdownMenuBox(
+                        expanded = expandedStatus,
+                        onExpandedChange = { expandedStatus = !expandedStatus },
+                        modifier = Modifier
+                            .padding(bottom = 24.dp)
+                    ) {
+                        OutlinedTextField(
+                            value = status,
+                            onValueChange = {},
+                            readOnly = true,
+                            placeholder = { Text("Pilih status karyawan") },
+                            trailingIcon = {
+                                ExposedDropdownMenuDefaults.TrailingIcon(expanded = expandedStatus)
+                            },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .menuAnchor()
+                        )
+                        ExposedDropdownMenu(
+                            expanded = expandedStatus,
+                            onDismissRequest = { expandedStatus = false }
+                        ) {
+                            statusOptions
+                                .forEach { option ->
+                                DropdownMenuItem(
+                                    text = { Text(option) },
+                                    onClick = {
+                                        status = option
+                                        expandedStatus = false
+                                        showError = false
+                                    }
+                                )
+                            }
+                        }
+                    }
+
 

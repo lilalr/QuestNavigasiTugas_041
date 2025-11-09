@@ -235,4 +235,22 @@ fun FormulirScreen(
                                 .padding(bottom = 16.dp),
                             textAlign = TextAlign.Center
                         )
+                        Text(
+                            "Nama: $namaLengkap",
+                            fontSize = 12.sp)
+                        Text(
+                            "Jenis Kelamin: $jenisKelamin",
+                            fontSize = 12.sp)
+                        Text(
+                            "Jabatan: $jabatan",
+                            fontSize = 12.sp)
+                        Text(
+                            "Departemen: $departemen",
+                            fontSize = 12.sp)
+                        Text(
+                            "Status: $status",
+                            fontSize = 12.sp,
+                            modifier = Modifier
+                                .padding(bottom = 16.dp))
+
 

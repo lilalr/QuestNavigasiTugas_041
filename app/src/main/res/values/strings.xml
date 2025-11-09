@@ -1,0 +1,14 @@
+<resources>
+<string name="app_name">QuestNavigasiTugas_041</string>
+<string name="welcome_title">CARD-LST</string>
+<string name="welcome_subtitle">MOBILE APP</string>
+<string name="welcome_button">Masuk</string>
+<string name="form_title">Formulir Pendaftaran</string>
+<string name="nama_lengkap">NAMA LENGKAP</string>
+<string name="jenis_kelamin">JENIS KELAMIN</string>
+<string name="alamat">ALAMAT</string>
+<string name="submit">Submit</string>
+<string name="back">Back</string>
+<string name="tampil">Tampilan Data</string>
+<string name="home">Form Isian</string>
+</resources>

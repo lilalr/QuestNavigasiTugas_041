@@ -184,6 +184,13 @@ fun ListScreen(
     }
 }
 
+@Composable
+fun BottomNavigationBar(
+    currentScreen: String,
+    onNavigateToHome: () -> Unit,
+    onNavigateToForm: () -> Unit
+) {
+
 
 
 

@@ -130,6 +130,14 @@ fun ListScreen(
                 modifier = Modifier.padding(24.dp)
             )
 
-
+            if (listPeserta.isEmpty()) {
+                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                    Text(
+                        "Belum ada data yang tersimpan",
+                        color = Color.Black,
+                        fontSize = 14.sp
+                    )
+                }
+            }
 
 

@@ -72,6 +72,11 @@ fun WelcomeScreen(onMasukClick: () -> Unit) {
                     .padding(vertical = 10.dp)
             )
 
+            Text(
+                "Lailatul Ramadhani",
+                fontSize = 13.sp,
+                color = Color.DarkGray)
+
 
 
 

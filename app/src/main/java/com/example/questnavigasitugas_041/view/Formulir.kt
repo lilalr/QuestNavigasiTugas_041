@@ -215,4 +215,24 @@ fun FormulirScreen(
             }
         }
 
+        if (showPopup) {
+            Dialog(onDismissRequest = {}) {
+                Card(
+                    shape = RoundedCornerShape(16.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = Color.White)
+                ) {
+                    Column(
+                        modifier = Modifier
+                        .padding(24.dp)) {
+                        Text(
+                            text = "Data karyawan berhasil disimpan!",
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = Color.Black,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(bottom = 16.dp),
+                            textAlign = TextAlign.Center
+                        )
 

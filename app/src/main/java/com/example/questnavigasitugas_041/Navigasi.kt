@@ -15,5 +15,24 @@ enum class HalamanApp {
     Formulir
 }
 
+@Composable
+fun NavigasiApp(
+    navController: NavHostController = rememberNavController(),
+    viewModel: com.example.questnavigasitugas_041.view.PesertaViewModel = viewModel()
+) {
+    val listPeserta by viewModel.listPeserta.collectAsState()
+
+    NavHost(
+        navController = navController,
+        startDestination = HalamanApp.Welcome.name
+    ) {
+        composable(HalamanApp.Welcome.name) {
+            com.example.questnavigasitugas_041.view.WelcomeScreen(
+                onMasukClick = {
+                    navController.navigate(HalamanApp.List.name)
+                }
+            )
+        }
+
 
 

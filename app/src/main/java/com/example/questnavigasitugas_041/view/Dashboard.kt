@@ -199,6 +199,18 @@ fun BottomNavigationBar(
                     tint = Color.White
                 )
             },
-
-
+            label = {
+                Text(
+                    text = "Beranda",
+                    fontSize = 10.sp,
+                    color = Color.White
+                )
+            },
+            selected = currentScreen == "list",
+            onClick = onNavigateToHome,
+            colors = NavigationBarItemDefaults.colors(
+                indicatorColor = Color.Transparent
+            )
+        )
+        N
 

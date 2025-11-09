@@ -101,6 +101,35 @@ fun WelcomeScreen(onMasukClick: () -> Unit) {
     }
 }
 
+@Composable
+fun ListScreen(
+    listPeserta: List<TampilData>,
+    onNavigateToForm: () -> Unit,
+    onNavigateToHome: () -> Unit
+) {
+    Scaffold(
+        bottomBar = {
+            BottomNavigationBar(
+                currentScreen = "list",
+                onNavigateToHome = onNavigateToHome,
+                onNavigateToForm = onNavigateToForm
+            )
+        }
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color(0xFFF4F4F4))
+                .padding(paddingValues)
+        ) {
+            Text(
+                text = "Data Karyawan",
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Black,
+                modifier = Modifier.padding(24.dp)
+            )
+
 
 
 

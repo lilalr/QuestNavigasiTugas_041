@@ -57,4 +57,11 @@ fun WelcomeScreen(onMasukClick: () -> Unit) {
                 modifier = Modifier.padding(bottom = 8.dp)
             )
 
+            Text(
+                text = "Aplikasi Formulir Pendaftaran",
+                fontSize = 20.sp,
+                color = Color.Black,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+
 

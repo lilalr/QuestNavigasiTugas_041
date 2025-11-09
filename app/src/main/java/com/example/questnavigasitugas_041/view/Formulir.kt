@@ -295,4 +295,19 @@ fun InputField(label: String,
     )
 }
 
+@Composable
+fun GenderField(selected: String,
+                onSelect: (String) -> Unit) {
+    Text(
+        "Jenis Kelamin",
+        fontSize = 12.sp,
+        fontWeight = FontWeight.SemiBold,
+        color = Color.DarkGray)
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 8.dp),
+        horizontalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+
 

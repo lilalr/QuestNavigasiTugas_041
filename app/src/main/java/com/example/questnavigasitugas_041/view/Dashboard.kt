@@ -77,6 +77,12 @@ fun WelcomeScreen(onMasukClick: () -> Unit) {
                 fontSize = 13.sp,
                 color = Color.DarkGray)
 
+            Text(
+                "20230140041",
+                fontSize = 12.sp,
+                color = Color.DarkGray,
+                modifier = Modifier.padding(bottom = 30.dp))
+
 
 
 

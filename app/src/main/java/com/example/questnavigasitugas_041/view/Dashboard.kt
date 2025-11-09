@@ -212,5 +212,23 @@ fun BottomNavigationBar(
                 indicatorColor = Color.Transparent
             )
         )
-        N
+        NavigationBarItem(
+            icon = {
+                Icon(
+                    Icons.Default.Description,
+                    contentDescription = "Formulir",
+                    tint = Color.White)
+            },
+            label = {
+                Text(
+                    "Formulir",
+                    fontSize = 10.sp,
+                    color = Color.White)
+            },
+            selected = currentScreen == "form",
+            onClick = onNavigateToForm
+        )
+    }
+}
+
 

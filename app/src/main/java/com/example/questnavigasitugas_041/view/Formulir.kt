@@ -322,4 +322,17 @@ fun GenderField(selected: String,
                 fontSize = 14.sp,
                 color = Color.Gray)
         }
-
+        Row(
+            verticalAlignment = Alignment.CenterVertically) {
+            RadioButton(
+                selected = selected == "Perempuan",
+                onClick = { onSelect("Perempuan") },
+                colors = RadioButtonDefaults.colors(
+                    selectedColor = Color.Black)
+            )
+            Text("Perempuan",
+                fontSize = 14.sp,
+                color = Color.Gray)
+        }
+    }
+}
